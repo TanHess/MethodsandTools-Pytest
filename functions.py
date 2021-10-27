@@ -48,9 +48,18 @@ def isPalindrome(temp):
 def divide():
     num1 = int(input("Enter a number: "))
     num2 = int(input("Enter another number: "))
+    try:
+        float(num1)
+        float(num2)
+    except:
+        print("Error! Only numbers and no division by zero!")
+        return
 
-    div = num1 / num2
-
+    try:
+        div = num1 / num2
+    except ZeroDivisionError:
+        print("Error! Only numbers and no division by zero!")
+        return
     print("Your numbers divided is:", div)
 
 ## returns the squareroot of a particular number
