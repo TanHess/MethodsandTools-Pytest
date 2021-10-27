@@ -3,9 +3,13 @@ import math
 ## opens a file in read mode
 ## filename received as a parameter
 def openFile(filename):
-    infile = open(filename, "r")
-
-    print("File opened.")
+    try:
+        infile = open(filename, "r")
+        print("File opened.")
+        return True
+    except:
+        print("Unexpected error!")
+        return False
 
 ## takes two numbers and returns
 ## the result of a division
@@ -15,6 +19,14 @@ def numbers(num1, num2):
 ## takes in two points
 ## finds the distance between the points
 def dist(x1, y1, x2, y2):
+    try:
+        x1 = float(x1)
+        x2 = float(x2)
+        y1 = float(y1)
+        y2 = float(y2)
+    except:
+        return False
+
     dist = (x2 - x1) ** 2 + (y2 - y1) ** 2
     dist = math.sqrt(dist)
 
