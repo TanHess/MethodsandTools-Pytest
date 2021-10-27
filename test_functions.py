@@ -52,7 +52,7 @@ def test_dist(x1, y1, x2, y2):
         assert dist(x1, y1, x2, y2) == 1
 
 
-'''=======================FUNCTION 3======================='''
+'''=======================FUNCTION 5======================='''
 def division_inputs1(spec):
     if spec == 1:
         inputs = [1, 2]
