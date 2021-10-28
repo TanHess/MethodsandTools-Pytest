@@ -25,12 +25,10 @@ def test_numbers_floats():
     assert numbers(2.6, 1.6) == 1.625
 
 def test_numbers_strings():
-    with pytest.raises(TypeError):
-        numbers("hello", "world")
+    assert numbers("hello", "world") == "Error: Can't divide with strings"
 
 def test_numbers_divide_by_zero():
-    with pytest.raises(ZeroDivisionError):
-        numbers(5, 0)
+    assert numbers(5, 0) == "Error: Divide by Zero"
 
 def test_numbers_fail():
     assert numbers(6, 3) == 5
@@ -51,6 +49,17 @@ def test_dist(x1, y1, x2, y2):
     else:
         assert dist(x1, y1, x2, y2) == 1
 
+'''=======================FUNCTION 4======================='''
+@pytest.mark.parametrize('value', ['string', 'racecar', True, 54])
+def test_isPalindrome(value):
+    if value == 'string':
+        assert isPalindrome(value) == False
+    elif value == 'racecar':
+        assert isPalindrome(value) == True
+    elif value == True:
+        assert isPalindrome(value) == "Invalid"
+    elif value == 54:
+        assert isPalindrome(value) == "Invalid"
 
 '''=======================FUNCTION 5======================='''
 def division_inputs1(spec):

@@ -14,8 +14,16 @@ def openFile(filename):
 ## takes two numbers and returns
 ## the result of a division
 def numbers(num1, num2):
-    return num1 / num2
+    try:
+        return num1 / num2
 
+    except:
+        if num2 == 0:
+            return "Error: Divide by Zero"
+        elif isinstance(num1, str) or isinstance(num2, str):
+            return "Error: Can't divide with strings"
+        else:
+            return "Error"
 ## takes in two points
 ## finds the distance between the points
 def dist(x1, y1, x2, y2):
@@ -35,13 +43,16 @@ def dist(x1, y1, x2, y2):
 ## takes in a string -- reverses it
 ## then compares the two
 def isPalindrome(temp):
-    test = temp[::-1]
+    try:
+        test = temp[::-1]
 
-    if(test == temp):
-        return True
+        if(test == temp):
+            return True
+        else:
+            return False
 
-    else:
-        return False
+    except:
+        return "Invalid"
 
 ## has input to receive two numbers
 ## divides the two, then outputs the result
