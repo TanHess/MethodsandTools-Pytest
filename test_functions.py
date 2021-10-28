@@ -106,3 +106,14 @@ def test_divide4(monkeypatch, capsys):
     captured_stdout, captured_stderr = capsys.readouterr()
     assert captured_stdout.strip() == "Error! Only numbers and no division by zero!"
 
+'''=======================FUNCTION 6======================='''
+@pytest.mark.parametrize('value', ['test', 36, 24.01, 9])
+def test_sq(value):
+    if value == 'test':
+        assert sq(value) == "Invalid"
+    elif value == 36:
+        assert sq(value) == 6
+    elif value == 24.01:
+        assert sq(value) == 4.9
+    elif value == 9:
+        assert sq(value) == 9
