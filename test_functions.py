@@ -50,7 +50,7 @@ def test_dist(x1, y1, x2, y2):
         assert dist(x1, y1, x2, y2) == 1
 
 '''=======================FUNCTION 4======================='''
-@pytest.mark.parametrize('value', ['string', 'racecar', True, 54])
+@pytest.mark.parametrize('value', ['string', 'racecar', True, 54, 23.45])
 def test_isPalindrome(value):
     if value == 'string':
         assert isPalindrome(value) == False
@@ -59,6 +59,8 @@ def test_isPalindrome(value):
     elif value == True:
         assert isPalindrome(value) == "Invalid"
     elif value == 54:
+        assert isPalindrome(value) == "Invalid"
+    elif value == 23.45:
         assert isPalindrome(value) == "Invalid"
 
 '''=======================FUNCTION 5======================='''
