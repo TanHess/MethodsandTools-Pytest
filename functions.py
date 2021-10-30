@@ -84,9 +84,16 @@ def sq(num):
 ## greets them by their entire name
 ## names should be strings
 def greetUser(first, middle, last):
-    print("Hello!")
-    print("Welcome to the program", first, middle, last)
-    print("Glad to have you!")
+    firstTest = first.isdigit()
+    middleTest = middle.isdigit()
+    lastTest = last.isdigit()
+    if (not firstTest or not middleTest or not lastTest):
+        print("Error! Names should only include letters.")        
+    else:
+        print("Hello!")
+        print("Welcome to the program", first, middle, last)
+        print("Glad to have you!")
+
 
 ## takes in a Python list
 ## attempts to display the item at the index provided

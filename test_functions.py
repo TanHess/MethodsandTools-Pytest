@@ -122,11 +122,16 @@ def test_sq(value):
 
 
 '''=======================FUNCTION 7======================='''
-@pytest.mark.parametrize('first, middle, last', [('tanner', 'morrow', 'hess'),(8, 'morrow', 9.8), ('lindsay', 'anne', 'roberts')] )
+@pytest.mark.parametrize('first, middle, last', [('tanner', 'morrow', 'hess'),('fe2k4', 'morrow', 9.8), ('lindsay', 'anne', 'roberts')] )
 def test_greetUser(first, middle, last, capsys):
+    greetUser(first, middle, last)
     captured_stdout, captured_stderr = capsys.readouterr()
     if first == 'tanner':
-        assert captured_stdout.strip() == "Hello! Welcome to the program tanner morrow hess Glad to have you!"
+        assert captured_stdout == "Hello!\nWelcome to the program tanner morrow hess\nGlad to have you!\n"
+    if first == 'lindsay':
+        assert captured_stdout == "Hello!\nWelcome to the program lindsay anne roberts\nGlad to have you!\n"
+    if first == 'fe2k4':
+        assert captured_stdout == "Error! Names should only include letters."
 
 
 '''=======================FUNCTION 8======================='''
