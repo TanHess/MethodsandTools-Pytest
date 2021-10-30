@@ -139,7 +139,7 @@ def test_greetUser(first, middle, last, capsys):
 '''=======================FUNCTION 8======================='''
 # numbers is suppose to be a list :)
 
-@pytest.mark.parametrize('numbers, index', [([0,1,2,3,4],3), (2,2)])
+@pytest.mark.parametrize('numbers, index', [([0,1,2,3,4],3), (2,2), ([1,3,4,3,2], 8)])
 def test_displayItem(numbers, index, capsys):
     displayItem(numbers, index)
     captured_stdout, captured_stderr = capsys.readouterr()
@@ -147,3 +147,5 @@ def test_displayItem(numbers, index, capsys):
         assert captured_stdout.strip() == "Your item at 3 index is 3"
     if index == 2:
         assert captured_stdout.strip() == "Error! Invalid"
+    if index == 8:
+        assert captured_stdout.strip() == "Error! Invalid"        
