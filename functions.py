@@ -84,17 +84,15 @@ def sq(num):
 ## greets them by their entire name
 ## names should be strings
 def greetUser(first, middle, last):
-    try:
-        first = str(first)
-        middle = str(middle)
-        last = str(last)
-    except:
-        print("Error! Names should only include letters.")
-        return
-    firstTest = first.isdigit()
-    middleTest = middle.isdigit()
-    lastTest = last.isdigit()
-    if (firstTest or middleTest or lastTest):
+    first = str(first)
+    middle = str(middle)
+    last = str(last)
+
+    isNumberFirst = any(map(str.isdigit, first))
+    isNumberMiddle = any(map(str.isdigit, middle))
+    isNumberLast = any(map(str.isdigit, last))
+    
+    if (isNumberFirst or isNumberMiddle or isNumberLast):
         print("Error! Names should only include letters.")        
     else:
         print("Hello!")
@@ -106,3 +104,4 @@ def greetUser(first, middle, last):
 ## attempts to display the item at the index provided
 def displayItem(numbers, index):
     print("Your item at", index, "index is", numbers[index])
+
