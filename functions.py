@@ -106,8 +106,9 @@ def displayItem(numbers, index):
     isList = isinstance(numbers, list)
     if (not isList):
         print("Error! Invalid")
-    try:
-        print("Your item at", index, "index is", numbers[index])
-    except:
-        print("Error! Invalid")
+    else:
+        try:
+            print("Your item at", index, "index is", numbers[index])
+        except:
+            print("Error! Invalid")
 
