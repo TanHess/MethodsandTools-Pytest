@@ -119,3 +119,14 @@ def test_sq(value):
         assert sq(value) == 4.9
     elif value == 9:
         assert sq(value) == 9
+
+
+'''=======================FUNCTION 7======================='''
+@pytest.mark.parametrize('first, middle, last', [('tanner', 'morrow', 'hess'),(8, 'morrow', 9.8), ('lindsay', 'anne', 'roberts')] )
+def test_greetUser(first, middle, last, capsys):
+    captured_stdout, captured_stderr = capsys.readouterr()
+    if first == 'tanner':
+        assert captured_stdout.strip() == "Hello! Welcome to the program tanner morrow hess Glad to have you!"
+
+
+'''=======================FUNCTION 8======================='''
