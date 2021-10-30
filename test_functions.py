@@ -139,3 +139,5 @@ def test_greetUser(first, middle, last, capsys):
 '''=======================FUNCTION 8======================='''
 # numbers is suppose to be a list :)
 
+@pytest.mark.parametrize('numbers, index', [([0,1,2,3,4],3), ([9,8,6,5,7],2)])
+fdsf
