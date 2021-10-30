@@ -84,6 +84,13 @@ def sq(num):
 ## greets them by their entire name
 ## names should be strings
 def greetUser(first, middle, last):
+    try:
+        first = str(first)
+        middle = str(middle)
+        last = str(last)
+    except:
+        print("Error! Names should only include letters.")
+        return
     firstTest = first.isdigit()
     middleTest = middle.isdigit()
     lastTest = last.isdigit()
