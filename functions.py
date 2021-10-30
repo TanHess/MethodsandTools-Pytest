@@ -87,7 +87,7 @@ def greetUser(first, middle, last):
     firstTest = first.isdigit()
     middleTest = middle.isdigit()
     lastTest = last.isdigit()
-    if (not firstTest or not middleTest or not lastTest):
+    if (firstTest or middleTest or lastTest):
         print("Error! Names should only include letters.")        
     else:
         print("Hello!")
