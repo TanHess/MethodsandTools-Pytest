@@ -104,7 +104,7 @@ def greetUser(first, middle, last):
 ## attempts to display the item at the index provided
 def displayItem(numbers, index):
     isList = (numbers, list)
-    if (isList):
+    if (not isList):
         print("Error! Invalid")
     print("Your item at", index, "index is", numbers[index])
 
