@@ -57,11 +57,9 @@ def isPalindrome(temp):
 ## has input to receive two numbers
 ## divides the two, then outputs the result
 def divide():
-    num1 = int(input("Enter a number: "))
-    num2 = int(input("Enter another number: "))
     try:
-        float(num1)
-        float(num2)
+        num1 = int(input("Enter a number: "))
+        num2 = int(input("Enter another number: "))
     except:
         print("Error! Only numbers and no division by zero!")
         return
